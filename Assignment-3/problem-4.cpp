@@ -22,5 +22,14 @@ int main()
     
     std::cout << "Enter 5 digit number : ";
     std::cin >> N;
+
+    int lengthOfDigits = std::to_string(N).length();
+
+    if(lengthOfDigits > 5)
+    {
+        std::cout << "N can have maximum 5 digits! " << std::endl;
+        return EXIT_FAILURE;
+    }
+    
     digitSum(N);
 }

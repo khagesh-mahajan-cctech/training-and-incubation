@@ -25,5 +25,13 @@ int main()
     std::cout << "Enter number : ";
     std::cin >> N;
 
+    int lengthOfDigits = std::to_string(N).length();
+
+    if(lengthOfDigits > 5)
+    {
+        std::cout << "N can have maximum 5 digits! " << std::endl;
+        return EXIT_FAILURE;
+    }
+
     std::cout << "M = " << reverseNumber(N) << std::endl;
 }

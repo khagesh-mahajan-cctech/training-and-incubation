@@ -4,7 +4,7 @@
 /*
     Write a program to accept an integer N and calculate the sum of it's digit. 
     Please note N can have maximum 5 digits.
-    input : N = 123 | output : Sum of Digits = 7
+    input : N = 123 | output : Sum of Digits = 6
 */
 
 int sumOfDigits(int num)
@@ -26,6 +26,14 @@ int main()
     
     std::cout << "Enter number : ";
     std::cin >> num;
+
+    int lengthOfDigits = std::to_string(num).length();
+
+    if(lengthOfDigits > 5)
+    {
+        std::cout << "Number can have maximum 5 digits! " << std::endl;
+        return EXIT_FAILURE;
+    }
 
     std::cout << "Sum of digit : " << sumOfDigits(num) << std::endl;
 }
